@@ -205,7 +205,71 @@ VPC → Endpoints → Select S3 → Attach Route Table
 > Internet → IGW → ALB (Public Subnet) → EC2 (Private Subnet) → S3 via VPC Endpoint
 > Private EC2 internet access → NAT Gateway
 
----
+---🔷 Amazon S3 (Simple Storage Service)
+1️⃣ Amazon S3
+
+Definition (1 line):
+An object storage service designed to store and retrieve unlimited data with high durability and scalability.
+
+Why used:
+To store application assets, backups, logs, and static files securely.
+
+Problem it solves:
+Eliminates the need to manage storage servers while providing 99.999999999% durability.
+
+Creation Step:
+
+S3 → Create Bucket
+
+Enter globally unique bucket name
+
+Select Region (same as VPC)
+
+Keep Block Public Access Enabled
+
+Click Create
+
+2️⃣ S3 Versioning
+
+Definition:
+A feature that keeps multiple versions of an object in a bucket.
+
+Why used:
+To recover accidentally deleted or overwritten files.
+
+Problem solved:
+Prevents permanent data loss.
+
+Creation Step:
+S3 → Bucket → Properties → Versioning → Enable
+
+3️⃣ S3 Default Encryption
+
+Definition:
+Automatic encryption of objects stored in S3.
+
+Why used:
+To protect sensitive data at rest.
+
+Problem solved:
+Prevents unauthorized access to stored data.
+
+Creation Step:
+S3 → Bucket → Properties → Default Encryption → Enable (SSE-S3 or SSE-KMS)
+
+4️⃣ IAM Role for S3 Access
+
+Definition:
+An AWS identity with permissions allowing EC2 to access S3 securely.
+
+Why used:
+To avoid storing access keys inside EC2.
+
+Problem solved:
+Improves security by using temporary credentials.
+
+Creation Step:
+IAM → Roles → Create Role → Select EC2 → Attach S3 Policy → Attach to EC2
 
 # 💼 Short Professional GitHub Description
 
