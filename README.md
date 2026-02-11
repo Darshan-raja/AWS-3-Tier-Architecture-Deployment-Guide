@@ -200,8 +200,6 @@ VPC → Endpoints → Select S3 → Attach Route Table
 
 ---
 
-# 🔥 Full Architecture Flow (Short Version for LinkedIn)
-
 > Internet → IGW → ALB (Public Subnet) → EC2 (Private Subnet) → S3 via VPC Endpoint
 > Private EC2 internet access → NAT Gateway
 
@@ -271,9 +269,6 @@ Improves security by using temporary credentials.
 Creation Step:
 IAM → Roles → Create Role → Select EC2 → Attach S3 Policy → Attach to EC2
 
-# 💼 Short Professional GitHub Description
-
-> Implemented a highly available multi-AZ AWS architecture using custom VPC, public and private subnets, Internet Gateway, NAT Gateway, Application Load Balancer, EC2 instances, Security Groups, and VPC Endpoint. Designed secure traffic routing and network isolation aligned with AWS Well-Architected best practices.
 
 ---
 
